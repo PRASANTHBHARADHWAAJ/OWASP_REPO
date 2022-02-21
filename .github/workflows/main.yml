@@ -18,3 +18,5 @@ jobs:
         with:
           name: Zap_scan_xml
           path: ./.github/report_xml.xml
+      - name: 'Echo download path'
+        run: echo ${{steps.download.outputs.download-path}}
