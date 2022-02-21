@@ -10,3 +10,7 @@ jobs:
       - run: pwd && ls -l
       - name: run zap baseline scan
         run: zap-baseline.py -t https://demo.testfire.net -x report_xml.xml || echo 0
+      - uses: actions/upload-artifact@v2
+        with:
+            name: my-artifact
+            path: report_xml.xml
