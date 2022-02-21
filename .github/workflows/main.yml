@@ -12,7 +12,7 @@ jobs:
         run: zap-baseline.py -t https://demo.testfire.net -x report_xml.xml || echo 0
       - uses: actions/upload-artifact@v2
         with:
-            name: my-artifact
+            name: Zap_scan_xml
             path: report_xml.xml
       - uses: actions/download-artifact@v2
         with:
