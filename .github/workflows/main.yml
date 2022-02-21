@@ -16,5 +16,5 @@ jobs:
             path: report_xml.xml
       - uses: actions/download-artifact@v2
         with:
-          name: my-artifact
-          path: D:\SPB\Projects\Ivanti DevSecOps\Owasp Zap integration\Github_actions(21_02)\report_xml.xml
+          name: Zap_scan_xml
+          path: report_xml.xml
