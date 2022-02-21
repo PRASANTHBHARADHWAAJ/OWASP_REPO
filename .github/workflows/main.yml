@@ -17,4 +17,4 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: Zap_scan_xml
-          path: C:/Users/Prasanth Bharadhwaaj/Documents/GitHub/OWASP_ZAP_docker/.github/report_xml.xml
+          path: ./.github/report_xml.xml
