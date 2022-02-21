@@ -1,0 +1,18 @@
+name: ZAP
+on: push
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    
+    container:
+      image: owasp/zap2docker-stable
+      options: --user root -v ${{ github.workspace }}:/zap/wrk/:rw
+    steps:
+      - with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - run: pwd && ls -l
+      - name: run zap baseline scan
+        run: zap-baseline.py -t https://demo.testfire.net -U root -x report_xml.xml || echo 0
